@@ -80,6 +80,8 @@ export default {
 
   computed: {
     words() {
+      this.$store.dispatch("loadAllWords");
+      console.log(this.$store);
       return this.$store.getters.getAllWords;
     },
   },
